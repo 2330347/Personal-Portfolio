@@ -14,7 +14,7 @@ Welcome to my **Personal Portfolio Website** — a modern, responsive, and visua
 ## 💡 Features
 
 - 🎨 **Modern UI** with sleek color gradients and circular design elements
-- ⚡ **Fast and Responsive** layout using HTML, CSS (no JS required for basic functionality)
+- ⚡ **Fast and Responsive** layout using HTML, CSS , JS required for basic functionality.
 - 🧠 **Clean Code Structure** for easy scalability and readability
 - 🧑‍💻 **Skill Showcase** using devicon logos
 - 💼 **Project Highlights** with detailed descriptions and GitHub links
