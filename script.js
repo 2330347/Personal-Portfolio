@@ -63,7 +63,7 @@ if (cursor && follower && window.innerWidth > 768) {
 }
 
 /* ========== TYPEWRITER ========== */
-const roles = ['Web Developer', 'CS Student', 'Problem Solver', 'Tech Enthusiast'];
+const roles = ['Web Developer', 'ECS Student', 'Problem Solver', 'Tech Enthusiast'];
 let roleIdx = 0, charIdx = 0, isDeleting = false;
 const typeEl = document.getElementById('typewriter');
 function typewrite() {
