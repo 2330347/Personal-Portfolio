@@ -13,13 +13,14 @@ Welcome to my **Personal Portfolio Website** — a modern, responsive, and visua
 
 ## 💡 Features
 
-- 🎨 **Modern UI** with sleek color gradients and circular design elements
-- ⚡ **Fast and Responsive** layout using HTML, CSS , JS required for basic functionality.
-- 🧠 **Clean Code Structure** for easy scalability and readability
-- 🧑‍💻 **Skill Showcase** using devicon logos
-- 💼 **Project Highlights** with detailed descriptions and GitHub links
-- 📱 **Mobile-friendly** design using CSS Grid and media queries
-- 🔗 Smooth scrolling for navigation links
+- 🎨 **Modern UI** with sleek color gradients and circular design elements  
+- ⚡ **Fast and Responsive** layout using HTML, CSS & JavaScript  
+- 🧠 **Clean Code Structure** for easy scalability and readability  
+- 🧑‍💻 **Skill Showcase** using devicon logos  
+- 💼 **Project Highlights** with detailed descriptions and GitHub links  
+- 📱 **Mobile-friendly** design using CSS Grid and media queries  
+- 🔗 Smooth scrolling for navigation links  
+- ✨ **Interactive UI Elements** using JavaScript animations  
 
 ---
 
@@ -27,9 +28,10 @@ Welcome to my **Personal Portfolio Website** — a modern, responsive, and visua
 
 - **HTML5** – Semantic, structured layout  
 - **CSS3** – Responsive design, grid layout, gradients, transitions  
+- **JavaScript (ES6)** – Interactivity and dynamic behavior  
 - **Google Fonts** – `Poppins`, `Baloo Bhaijaan 2`  
 - **Remix Icon** – Icons for social and project links  
-- **Devicon** – Skill icons (HTML, CSS, Python, Java, MySQL)
+- **Devicon** – Skill icons (HTML, CSS, Python, Java, MySQL)  
 
 ---
 
@@ -39,17 +41,21 @@ Welcome to my **Personal Portfolio Website** — a modern, responsive, and visua
 - **About** – Background, volunteering, and DBMS certification highlights  
 - **Skills** – Display of technical competencies  
 - **Projects** – Showcase of:
-  - 🎮 *Tic Tac Toe Game (Python)*
-  - 🏧 *ATM Machine Simulator (Java)*
+  - 🎮 *Tic Tac Toe Game (Python)*  
+  - 🏧 *ATM Machine Simulator (Java)* 
 
 ---
 
 ## 📸 Screenshots
 
  <img width="1807" height="827" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/Home%20page.png?raw=true" />
+ 
  <img width="1811" height="832" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/About.png?raw=true" />
+ 
  <img width="1800" height="830" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/Skills.png?raw=true" />
+ 
  <img width="1809" height="824" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/projects.png?raw=true" />
+ 
  <img width="1809" height="824" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/Contact.png?raw=true" />
 
 
@@ -57,16 +63,17 @@ Welcome to my **Personal Portfolio Website** — a modern, responsive, and visua
 
 ## 🧠 What I Learned
 
-- Creating a **fully responsive** multi-section website using only HTML & CSS.
-- Utilizing **CSS Grid & Flexbox** effectively for layout management.
-- Applying **design thinking** and creativity for visual aesthetics.
-- Integrating **real project links** and skill icons professionally.
+- Creating a **fully responsive** multi-section website using HTML, CSS, and JavaScript  
+- Utilizing **CSS Grid & Flexbox** effectively for layout management  
+- Implementing **DOM manipulation and animations** using JavaScript :contentReference[oaicite:0]{index=0}  
+- Applying **design thinking** and creativity for visual aesthetics  
+- Integrating **interactive UI elements** for better user experience  
 
 ---
 
 ## 🎯 Future Enhancements
 
-- Add a **Contact Form** or section  
+- Add backend integration for **Contact Form**  
 - Implement a **Dark Mode Toggle**  
-- Animate scroll transitions with **AOS.js**  
-- Convert into a **React SPA** for advanced interactivity
+- Enhance animations with advanced libraries  
+- Convert into a **React SPA** for advanced interactivity 
