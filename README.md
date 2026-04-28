@@ -6,7 +6,7 @@ Welcome to my **Personal Portfolio Website** — a modern, responsive, and visua
 
 ## 🖼️ Preview
 
-<img width="1807" height="827" alt="image" src="https://github.com/user-attachments/assets/839b68c4-c961-4d5f-9e31-d8ab3a4c5ca9" />
+<img width="1807" height="827" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/Screenshot%202026-04-28%20212008.png?raw=true" />
 
 
 ---
