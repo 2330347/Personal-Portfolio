@@ -53,7 +53,7 @@ Welcome to my **Personal Portfolio Website** — a modern, responsive, and visua
  <img width="1811" height="832" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/About.png?raw=true" />
  <img width="1800" height="830" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/Skills.png?raw=true" />
  <img width="1809" height="824" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/projects.png?raw=true" />
- <img width="1809" height="824" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/projects.png?raw=true" />
+ <img width="1809" height="824" alt="image" src="https://github.com/2330347/Personal-Portfolio/blob/main/image/Contact.png?raw=true" />
 
 
 ---
