@@ -4,141 +4,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Protfolio</title>
+    <title>Sunita Raut — Web Developer & ECS Student</title>
+    <meta name="description" content="Portfolio of Sunita Raut — a passionate web developer and Electronics & Computer Science student at KIIT University.">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="Protfolio-container" id="home">
-        <ul class="navlist">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skill</a></li>
-            <li><a href="#projects">Project</a></li>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
         </ul>
-        <div class="left-container">
-            <div class="content">
-                <h2>Hi</h2>
-                <h1>I'm Sunita</h1>
-                <p>Welcome to my portfolio! I'm Sunita, a student at Kalinga Institute of Industrial Technology,
-                    currently pursuing a B.Tech in Electronics and Computer Science Engineering.</p>
-                <div class="btn-container">
-                    <a href="#projects"><button>View Project</button></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting anim-slide-up">Hello, I'm</p>
+                <h1 class="hero-name anim-slide-up delay-1">Sunita <span class="gradient-text">Raut</span></h1>
+                <div class="typewriter-wrapper anim-slide-up delay-2">
+                    <span class="typewriter-label">I'm a&nbsp;</span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
                 </div>
-
-            </div>
-        </div>
-        <div class="right-container"></div>
-        <div class="design">
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
-    </div>
-
-
-    <!--about section code-->
-
-    <div class="about-container" id="about">
-        <div class="left-about">
-            <div class="about-content">
-                <h2 class="heading">About <span>Me</span></h2>
-                <h3>I'm a <span>Web Developer</span></h3>
-                <p>I'm Sunita Raut, a second-year Electronics and Computer Science (ECSc) student at KIIT University,
-                    Bhubaneswar. I’m a passionate web developer with a strong interest in building responsive and
-                    user-friendly websites that blend functionality with great design.
-                    <br>
-                    My academic journey has been enriched by completing a DBMS course supported by Google and
-                    facilitated by SCALER, where I gained a solid foundation in database management systems and their
-                    real-world applications.
-                    <br>
-                    Beyond academics, I’m an active volunteer with NSS Lakshya. I’m deeply committed to community
-                    service, especially in the areas of poverty alleviation, education, and spreading joy in the lives
-                    of others. I believe in using my skills and time to make a positive impact—both in the digital world
-                    and the real one.
+                <p class="hero-description anim-slide-up delay-3">
+                    A passionate web developer and B.Tech student at Kalinga Institute of Industrial Technology, 
+                    specializing in Electronics & Computer Science Engineering.
                 </p>
-                <div class="btn-content">
-                    <button>Read More</button>
+                <div class="hero-cta anim-slide-up delay-4">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-socials anim-slide-up delay-5">
+                    <a href="https://github.com/2330347" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sunita-raut-820a89340/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+                    <a href="mailto:sunitaraut871@gmail.com" class="social-link" aria-label="Email">
+                        <i class="ri-mail-fill"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image anim-scale-in delay-2">
+                <div class="image-wrapper">
+                    <div class="image-ring"></div>
+                    <div class="image-ring ring-2"></div>
+                    <img src="image/Presonal_pic.png" alt="Sunita Raut" class="profile-photo">
+                    <div class="image-decoration dec-1"></div>
+                    <div class="image-decoration dec-2"></div>
+                    <div class="image-decoration dec-3"></div>
                 </div>
             </div>
         </div>
-        <div class="right-about"></div>
+        <div class="scroll-indicator anim-fade-in delay-5">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
 
-    </div>
-
-    <!--my skill-->
-
-    <div class="Skills-container" id="skills">
-        <div class="left-skills">
-            <div class="skills">
-                <h1 class="subtitle">My <span>Skills</span></h1>
-                <div class="skills-grid">
-                    <div class="skill-card"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">
-                        HTML</div>
-                    <div class="skill-card"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""> CSS
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag scroll-anim">WHO I AM</span>
+                <h2 class="section-title scroll-anim">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-col scroll-anim">
+                    <div class="about-img-container">
+                        <img src="image/profile_image.png" alt="Sunita Raut" class="about-photo">
+                        <div class="about-img-border"></div>
+                        <div class="about-exp-badge">
+                            <span class="exp-number">3+</span>
+                            <span class="exp-label">Years of Learning</span>
+                        </div>
                     </div>
-                    <div class="skill-card"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">
-                        Python
-                    </div>
-                    <div class="skill-card"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">
-                        MySQL
-                    </div>
-                    <div class="skill-card"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt=""> Java
+                </div>
+                <div class="about-text-col">
+                    <h3 class="about-subtitle scroll-anim">A passionate <span class="gradient-text">Web Developer</span> based in Bhubaneswar</h3>
+                    <p class="about-description scroll-anim">
+                        I'm Sunita Raut, a 4th-year Electronics and Computer Science (ECSc) student at KIIT University. 
+                        I'm passionate about building responsive and user-friendly websites that blend functionality with great design.
+                    </p>
+                    <p class="about-description scroll-anim">
+                        My academic journey has been enriched by completing a DBMS course supported by Google and facilitated by SCALER, 
+                        where I gained a solid foundation in database management systems and their real-world applications.
+                    </p>
+                    <p class="about-description scroll-anim">
+                        Beyond academics, I'm an active volunteer with NSS Lakshya, deeply committed to community service — 
+                        especially in education and spreading joy in the lives of others.
+                    </p>
+                    <div class="about-stats scroll-anim">
+                        <div class="stat-item">
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Volunteer Hours</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="right-skills"></div>
-    </div>
-    <!--my project-->
+    </section>
 
-    <div class="Project-content" id="projects">
-        <div class="left-project">
-    <!--Tic Tac Toe game-->
-    <div class="Projects">
-        <h1><span>My</span> Projects</h1>
-        <div class="project-container">
-            <img src="tic-tac-toe.png" alt="Tic Tac Toe" class="project-image">
-            <div class="project-card">
-                <h4>PROJECT #1</h4>
-                <h2>TIC TAC TOE GAME</h2>
-                <p>
-                    A simple 2-player Tic Tac Toe game built using Python. It features a command-line interface,
-                    automatic win checking, and draw detection. Great for beginners learning logic and loops.
-                </p>
-                <div class="icons">
-                    <a href="https://github.com/2330347/Tic-Tac-Toe-game" target="_blank"><i class="ri-github-fill"></i></a>
-
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag scroll-anim">WHAT I KNOW</span>
+                <h2 class="section-title scroll-anim">My <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card scroll-anim" data-tilt>
+                    <div class="skill-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    </div>
+                    <h4 class="skill-name">HTML5</h4>
                 </div>
-                <p class="tech">Python</p>
+                <div class="skill-card scroll-anim" data-tilt>
+                    <div class="skill-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    </div>
+                    <h4 class="skill-name">CSS3</h4>
+                </div>
+                <div class="skill-card scroll-anim" data-tilt>
+                    <div class="skill-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    </div>
+                    <h4 class="skill-name">JavaScript</h4>
+                </div>
+                <div class="skill-card scroll-anim" data-tilt>
+                    <div class="skill-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    </div>
+                    <h4 class="skill-name">Python</h4>
+                </div>
+                <div class="skill-card scroll-anim" data-tilt>
+                    <div class="skill-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    </div>
+                    <h4 class="skill-name">Java</h4>
+                </div>
+                <div class="skill-card scroll-anim" data-tilt>
+                    <div class="skill-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                    </div>
+                    <h4 class="skill-name">MySQL</h4>
+                </div>
             </div>
         </div>
-        <!--ATM machine-->
-        <div class="project-container">
-            <img src="atm machine.png" alt="ATM Machine" class="project-image">
-            <div class="project-card">
-                <h4>PROJECT #2</h4>
-                <h2>ATM MACHINE</h2>
-                <p>
-                    A console-based ATM simulation developed in Java. Users can log in with a PIN, check balances,
-                    deposit, and withdraw money. It includes validation for common banking operations.
-                </p>
-                <div class="icons">
-                    <a href="https://github.com/2330347/ATM-machine" target="_blank"><i class="ri-github-fill"></i></a>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag scroll-anim">WORK</span>
+                <h2 class="section-title scroll-anim">My <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 - Tic Tac Toe -->
+                <div class="project-card scroll-anim" id="project-tictactoe">
+                    <div class="project-image-wrapper">
+                        <img src="image/tictactoe-card.png" alt="Tic Tac Toe Game" class="project-thumbnail">
+                        <img src="image/tictactoe-demo.png" alt="Tic Tac Toe Demo" class="project-demo">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="overlay-tag">Python</span>
+                                <a href="https://github.com/2330347/Tic-Tac-Toe-game" target="_blank" class="overlay-btn">
+                                    <i class="ri-github-fill"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-number">01</span>
+                        <h3 class="project-title">Tic Tac Toe Game</h3>
+                        <p class="project-desc">
+                            A 2-player Tic Tac Toe game built with Python featuring a command-line interface, 
+                            automatic win checking, and draw detection.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">CLI</span>
+                            <span class="tech-tag">Game Logic</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/2330347/Tic-Tac-Toe-game" target="_blank" class="project-link">
+                                <i class="ri-github-fill"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <p class="tech">Java</p>
+
+                <!-- Project 2 - ATM Machine -->
+                <div class="project-card scroll-anim" id="project-atm">
+                    <div class="project-image-wrapper">
+                        <img src="image/atm-card.png" alt="ATM Machine" class="project-thumbnail">
+                        <img src="image/atm-demo.png" alt="ATM Machine Demo" class="project-demo">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="overlay-tag">Java</span>
+                                <a href="https://github.com/2330347/ATM-machine" target="_blank" class="overlay-btn">
+                                    <i class="ri-github-fill"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-number">02</span>
+                        <h3 class="project-title">ATM Machine Simulator</h3>
+                        <p class="project-desc">
+                            A console-based ATM simulation in Java with PIN login, balance checking, 
+                            deposit and withdrawal operations with full validation.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">Banking</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/2330347/ATM-machine" target="_blank" class="project-link">
+                                <i class="ri-github-fill"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Weather App -->
+                <div class="project-card scroll-anim" id="project-weather">
+                    <div class="project-image-wrapper">
+                        <img src="image/Weather_Interface .png" alt="Weather App" class="project-thumbnail">
+                        <img src="image/Weather_Demo.png" alt="Weather App Demo" class="project-demo">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <span class="overlay-tag">JavaScript</span>
+                                <a href="https://github.com/2330347/Weather-app-interface" target="_blank" class="overlay-btn">
+                                    <i class="ri-github-fill"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-number">03</span>
+                        <h3 class="project-title">Weather App Interface</h3>
+                        <p class="project-desc">
+                            A beautiful, minimal, and fully functional Weather App using the OpenWeatherMap API 
+                            to fetch real-time weather data including temperature, humidity, wind speed, and a 5-day forecast.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/2330347/Weather-app-interface" target="_blank" class="project-link">
+                                <i class="ri-github-fill"></i>
+                                <span>Source Code</span>
+                            </a>
+                            <a href="https://weather-app-interface.vercel.app/" target="_blank" class="project-link live-link">
+                                <i class="ri-external-link-line"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="right-project"></div>
-</div>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag scroll-anim">GET IN TOUCH</span>
+                <h2 class="section-title scroll-anim">Let's <span class="gradient-text">Connect</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info scroll-anim">
+                    <p class="contact-description">
+                        I'm always open to discussing new opportunities, creative ideas, or just having a chat about technology and development.
+                    </p>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>sunitaraut871@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Bhubaneswar, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="ri-graduation-cap-line"></i>
+                            </div>
+                            <div>
+                                <h4>University</h4>
+                                <p>KIIT University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form scroll-anim" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <i class="ri-send-plane-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">Designed & Built by Sunita Raut</p>
+            <div class="footer-socials">
+                <a href="https://github.com/2330347" target="_blank" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="mailto:sunita@email.com" aria-label="Email"><i class="ri-mail-fill"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Sunita Raut. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
